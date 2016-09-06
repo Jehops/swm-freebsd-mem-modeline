@@ -1,6 +1,6 @@
 ;; swm-freebsd-mem-modline.lisp
 ;;
-;; Put %u in your modeline format string to show the percetage of system memory
+;; Put %M in your modeline format string to show the percetage of system memory
 ;; used.
 ;;
 
