@@ -3,8 +3,8 @@
 interval=3 # customize this
 mem_tot="$(sysctl -n hw.realmem)"
 mem_tot="$(( mem_tot/1024/1024 ))"
-#stump_pid="$(pgrep -a -n stumpwm)"
-stump_pid="$(pgrep -anf -U "$(id -u)" "sbcl .*(stumpwm:stumpwm)")"
+stump_pid="$(pgrep -a -n stumpwm)"
+#stump_pid="$(pgrep -anf -U "$(id -u)" "sbcl .*(stumpwm:stumpwm)")"
 
 # while stumpwm is still running
 while kill -0 "$stump_pid" > /dev/null 2>&1; do
