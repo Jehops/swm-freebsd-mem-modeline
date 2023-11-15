@@ -1,7 +1,7 @@
 #!/bin/sh
 
 interval=3 # customize this
-mem_tot="$(awk '/real memory/ {print $4;exit}' /var/run/dmesg.boot)"
+mem_tot="$(sysctl -n hw.realmem)"
 mem_tot="$(( mem_tot/1024/1024 ))"
 #stump_pid="$(pgrep -a -n stumpwm)"
 stump_pid="$(pgrep -anf -U "$(id -u)" "sbcl .*(stumpwm:stumpwm)")"
